@@ -1,22 +1,25 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ProfileSettingModule } from './profile-setting/profile-setting.module';
-import { ProfileSettingComponent } from './profile-setting/profile-setting/profile-setting.component';
+import { ProfileSettingComponent } from './profile-setting/profile-setting.component';
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ProfileSettingComponent,
+  
   ],
   imports: [
     BrowserModule,
     CommonModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   exports : [
     BrowserModule,
