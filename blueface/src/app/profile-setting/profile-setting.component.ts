@@ -9,7 +9,7 @@ import { IProfile, ProfileService } from './profile.service';
   styleUrls: ['./profile-setting.component.scss'],
 })
 export class ProfileSettingComponent implements OnInit {
-  title = 'profile';
+  title = 'Profile';
   user$!: Promise<IProfile>;
   username: string = '';
   firstName: string = '';
@@ -22,6 +22,7 @@ export class ProfileSettingComponent implements OnInit {
     lastName: [''],
   });
   email : string ="";
+
 
   constructor(
     private profileService: ProfileService,
@@ -89,12 +90,6 @@ export class ProfileSettingComponent implements OnInit {
     });
   }
 
-  // revertInputsToInitialValues(firstName : string, lastName : string){
-  //   this.profileForm.patchValue({
-  //     firstName,
-  //     lastName
-  //   });
-  // }
   setEmail(firstName : string, lastName : string) {
 
     const emailPromise = this.profileService.setEmail(firstName, lastName);
@@ -113,11 +108,6 @@ export class ProfileSettingComponent implements OnInit {
     this.error = "";
     const firstName = this.profileForm.controls['firstName'].value;
     const lastName = this.profileForm.controls['lastName'].value;
-    // const user = {
-    //   "username" : firstName + '.' + lastName,
-    //   "firstName" : firstName,
-    //   "lastName" : lastName
-    // }
     this.setName(firstName, lastName);
     
 
