@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
+import { TranslateService } from '@ngx-translate/core';
 import { IProfile, ProfileService } from './profile.service';
 
 @Component({
@@ -24,8 +25,14 @@ export class ProfileSettingComponent implements OnInit {
 
   constructor(
     private profileService: ProfileService,
-    private fb: FormBuilder
-  ) {}
+    private fb: FormBuilder,
+    translate: TranslateService
+  ) {
+    translate.setDefaultLang('en');
+
+     // the lang to use, if the lang isn't available, it will use the current loader to get them
+    translate.use('en');
+  }
 
   ngOnInit(): void {
     this.getProfileUser();

@@ -4,28 +4,28 @@
   <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
     <div>
       <div class="form-group row">
-        <div class="col-md-2">Username :</div>
+        <div class="col-md-2">{{ "PROFILE-SETTING.USERNAME" | translate}} :</div>
         <div class="col-md-3">{{ username }}</div> 
       </div>
       <div>
         <div class="form-group row">
-          <label for="firstName" class="col-md-2">First Name :</label>
+          <label for="firstName" class="col-md-2">{{ "PROFILE-SETTING.FIRSTNAME" | translate}}  :</label>
           <input  type="text" 
                   class="form-control col-md-3" 
                   id="firstName" [disabled]="isLoading" formControlName="firstName" (change)="deleteErrMesg()"/>
         </div>
         <div class="form-group row">
-          <label for="lastName" class="col-md-2">Last Name :</label>
+          <label for="lastName" class="col-md-2">{{ "PROFILE-SETTING.LASTNAME" | translate}} :</label>
           <input  type="text"
                   class="form-control col-md-3"
                   id="lastName" [disabled]="isLoading" formControlName="lastName" (change)="deleteErrMesg()"/>
         </div>
-        <div>
-          <p>email : {{ email }}</p>
-          
+        <div class="form-group row">
+          <div class="col-md-2">{{ "PROFILE-SETTING.EMAIL" | translate }} :</div>
+          <div class="col-md-3">{{ email }}</div>           
         </div>
         <div>
-          <input class="btn" type="button" value="save" [disabled]="isLoading" (click)="onSubmit()" />
+          <button class="btn" type="button" value="save" [disabled]="isLoading" (click)="onSubmit()">{{ "PROFILE-SETTING.SAVE" | translate}}</button>
         </div>
       </div>
     </div>

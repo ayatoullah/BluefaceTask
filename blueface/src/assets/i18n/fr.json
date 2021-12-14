@@ -1,0 +1,12 @@
+{
+    "HOME" : {
+        "SELECT-LANGUAGE" : "Choisir la langue"
+    },
+    "PROFILE-SETTING" : {
+        "USERNAME" : "NOM D'UTILISATEUR",
+        "FIRSTNAME" : "Prénom",
+        "LASTNAME" : "Nom de famille",
+        "EMAIL" : "E-mail",
+        "SAVE" : "SAUVER"
+    }
+}
